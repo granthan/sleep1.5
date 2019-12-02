@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements TimePicker.OnTime
         }
 
 
-
         //Handle staying within the AM boundaries
         if (hour + 4 < 12) {
             low_label = "AM";
@@ -109,8 +108,16 @@ public class MainActivity extends AppCompatActivity implements TimePicker.OnTime
 
 
         //Handle noon
+        if (hour + 4 == 12 && minute < 30) {
+            low_hour += 12;
+        }
+
         if (hour + 6 == 12) {
             med_low_hour += 12;
+        }
+
+        if (hour + 7 == 12 && minute < 30) {
+            med_hour += 12;
         }
 
         if (hour + 9 == 12) {
