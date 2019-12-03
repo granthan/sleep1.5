@@ -7,32 +7,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="@string/thinking"
+        android:textSize="22sp" />
 
 
     <TimePicker
         android:id="@+id/pickSleepTime"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="351dp"
         android:timePickerMode="clock" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="Times to wake up!"
-        android:textSize="25dp"
+        android:text="Tap a time to set an alarm!"
+        android:textSize="22sp"
         android:gravity="center"/>
 
 
 
-    <TextView
-        android:id="@+id/sleepTime"
+    <ListView
+        android:id="@+id/sleepList"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:gravity="center_horizontal"
-        android:lines="4"
-
-
-        android:textSize="30dp" />
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:gravity="center_horizontal"/>
 
 </LinearLayout>
